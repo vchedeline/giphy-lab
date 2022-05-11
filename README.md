@@ -1,3 +1,10 @@
+# React Giphy Lab
+
+## Thinking Giphy Through
+![Component Hierachy](./public/img/Giphy_Lab.jpeg)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

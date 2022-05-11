@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Display from './components/Display';
+import { useState } from "react";
 
 function App() {
+  const API_KEY = "DejFpi6TdxRX3gZBGJXdk0WvaLSLlftV"
+
+  const [gif, setGif] = useState(null);
+  
+  const getGif = async() => {
+    const response = await fetch(
+      `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&tag=&rating=`
+    )
+    
+    const data = await response.json();
+
+    setGif(data);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button getGif={getGif}/>
+      <Display gif={gif}/>
     </div>
   );
 }
