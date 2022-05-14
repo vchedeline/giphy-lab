@@ -19,6 +19,7 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>Welcome to Giphy World</h1>
       <Button getGif={getGif}/>
       <Display gif={gif}/>
     </div>
