@@ -1,12 +1,14 @@
 export default function Display({ gif }) {
-  const noImage = () => {
-    return <h1>Image Goes Here</h1>;
-  };
+  const noImage = () => (
+    <div className="display-area">
+      <h2 id="placeholder">gEt ReAdY tO bE aMaZeD !</h2>
+    </div>
+  );
 
   const showImage = () => {
     return (
       <div className="display-area">
-        <h2>{gif.data.title || "Untitled"} </h2>
+        <h2 id="gif-title">{gif.data.title || "Untitled"} </h2>
         <img src={gif.data.images.original.url} alt="..." />
       </div>
     );

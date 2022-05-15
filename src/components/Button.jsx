@@ -1,7 +1,7 @@
-export default function Button(props) {
+export default function Button({getGif}) {
   const handleClick = (evt) => {
     evt.preventDefault();
-    props.getGif();
+    getGif();
   };
   return (
     <div>
