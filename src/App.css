@@ -58,4 +58,6 @@ img {
   border-radius: 3%;
   border: 5px dashed white;
   margin-bottom: 2%;
+  max-width: 90%;
+  max-height: 80%;
 }
